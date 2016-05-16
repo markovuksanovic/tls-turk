@@ -11,6 +11,6 @@ while read line; do
     cp ../letsencrypt.sh/certs/${line}/fullchain.pem /etc/nginx/certs/${line}.crt
     echo "Copied public key for ${line}."
   else
-    echo "Certificate for ${line} not found at ../letsencrypt.sh/certs/${line}/fullchain. Skipping..."
+    echo "Certificate for ${line} not found at ../letsencrypt.sh/certs/${line}/fullchain.pem. Skipping..."
   fi
 done < "$@"
